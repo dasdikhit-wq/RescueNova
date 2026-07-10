@@ -1,0 +1,74 @@
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --primary: #b00b69;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .section-header {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .tech-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-active {
+            color: #b00b69;
+            font-weight: 600;
+        }
+
+        .risk-low { background-color: #dcfce7; color: #166534; border-color: #86efac; }
+        .risk-medium { background-color: #fefce8; color: #ff4800; border-color: #fd8147; }
+        .risk-high { background-color: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+
+        .dashboard-bg {
+            background: linear-gradient(135deg, #b00b69 0%, #7a0a4d 100%);
+        }
+
+        .metric-value {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .prediction-result {
+            animation: fadeInScale 0.4s ease-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .ai-glow {
+            box-shadow: 0 0 15px rgba(13, 148, 136, 0.3);
+        }
+
+        .river-wave {
+            animation: wave 3s ease-in-out infinite;
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .demo-map {
+            background-image: url('https://picsum.photos/id/1016/1200/630');
+            background-size: cover;
+            background-position: center;
+        }

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RescueNova AI • Protecting Tinsukia with Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-300">
+    <!-- Navbar -->
+    <nav class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <img src="https://placehold.co/100x100/b00b69/FFFFFF?text=RN" alt="RescueNova AI Logo" class="h-10 w-10 rounded-xl object-cover ring-1 ring-slate-200">
+                <div>
+                    <div class="font-display font-semibold text-lg text-white leading-tight">RescueNova AI</div>
+                    <div class="text-[10px] text-slate-400 tracking-wide">DISASTER INTELLIGENCE • TINSUKIA</div>
+                </div>
+            </div>
+            <span class="hidden md:inline text-xs font-medium text-slate-400">● PROTOTYPE MODE • AI Disaster Intelligence Platform • Version 2.0</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="max-w-screen-xl mx-auto px-6 py-16 md:py-20">
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+            <div class="md:col-span-7">
+                <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter leading-none text-white">
+                    AI-Powered Disaster Intelligence<br>
+                    <span class="text-pink-700">for Tinsukia District</span>
+                </h1>
+
+                <p class="mt-6 max-w-xl text-xl text-slate-400 leading-relaxed">
+                    RescueNova AI is an intelligent disaster management prototype designed to
+                    predict floods, monitor riverbank erosion, and assist emergency responders
+                    using simulated AI analysis based on rainfall, river levels, and satellite
+                    observations.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <span class="px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-semibold">
+                        Flood Prediction
+                    </span>
+                    <span class="px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold">
+                        River Monitoring
+                    </span>
+                    <span class="px-4 py-2 rounded-full bg-amber-100 text-amber-700 text-sm font-semibold">
+                        AI Decision Support
+                    </span>
+                    <span class="px-4 py-2 rounded-full bg-pink-100 text-pink-700 text-sm font-semibold">
+                        Satellite Analysis
+                    </span>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <button onclick="scrollToDemo()" 
+                            class="inline-flex items-center justify-center gap-x-3 px-8 h-14 bg-pink-700 hover:bg-pink-800 active:bg-pink-900 transition-all text-white font-semibold text-base rounded-3xl shadow-lg shadow-pink-700/30">
+                        <i class="fa-solid fa-rocket"></i>
+                        <span>Launch Live AI Demo</span>
+                    </button>
+                    
+                    <button onclick="document.getElementById('fieldwork-modal').showModal()" 
+                            class="inline-flex items-center justify-center gap-x-3 px-8 h-14 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-base rounded-3xl transition-all">
+                        <i class="fa-solid fa-map-marked"></i>
+                        <span>View Fieldwork Insights</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="md:col-span-5 relative">
+                <div class="aspect-[16/10] bg-slate-900 rounded-3xl shadow-2xl shadow-slate-900/10 border border-slate-800 overflow-hidden relative">
+                    <img src="https://picsum.photos/id/1016/800/500" class="w-full h-full object-cover" alt="Aerial view of Tinsukia flood-prone landscape with Burhi Dihing river">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-900/70 via-pink-900/40 to-transparent"></div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <div class="flex items-center justify-between text-white">
+                            <div>
+                                <div class="text-xs tracking-[2px] font-medium opacity-75">CURRENT STATUS</div>
+                                <div class="font-semibold text-lg">Burhi Dihing • Moderate Risk</div>
+                            </div>
+                            <div class="px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-2xl text-xs font-medium flex items-center gap-x-1.5">
+                                <i class="fa-solid fa-satellite fa-sm"></i>
+                                <span>Live Sentinel-1</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute top-6 right-6 bg-white/90 backdrop-blur px-3 py-1 rounded-2xl text-xs font-medium flex items-center gap-x-2 shadow">
+                        <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                        <span class="font-semibold text-pink-800">AI Models Online</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust / Stats Bar -->
+    <div class="border-y border-slate-800 bg-slate-900 py-5">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 text-center">
+                <div>
+                    <div class="text-3xl font-semibold text-pink-700 stat-number">48hr</div>
+                    <div class="text-xs tracking-widest font-medium text-slate-400 mt-1">TARGET LEAD TIME</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-semibold text-pink-700 stat-number">85%+</div>
+                    <div class="text-xs tracking-widest font-medium text-slate-400 mt-1">PREDICTION ACCURACY (PILOT)</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-semibold text-pink-700 stat-number">40+</div>
+                    <div class="text-xs tracking-widest font-medium text-slate-400 mt-1">VILLAGES IN DOOMDOOMA CIRCLE</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-semibold text-pink-700 stat-number">7</div>
+                    <div class="text-xs tracking-widest font-medium text-slate-400 mt-1">ZONES • MARgherita SUB-DIV</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem Section -->
+    <div class="max-w-screen-xl mx-auto px-6 py-16">
+        <div class="max-w-2xl">
+            <span class="uppercase tracking-[3px] text-xs font-semibold text-pink-600">THE CHALLENGE IN TINSUKIA</span>
+            <h2 class="section-header tracking-tighter mt-3">Annual floods and riverbank erosion devastate communities along the Burhi Dihing and Brahmaputra tributaries.</h2>
+        </div>
+        
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+            <div class="bg-slate-900 p-6 rounded-3xl border border-slate-800">
+                <i class="fa-solid fa-water text-3xl text-pink-600 mb-4"></i>
+                <h4 class="font-semibold text-lg">Recurring Floods</h4>
+                <p class="mt-2 text-sm text-slate-400">Tinsukia Revenue Circle, Doomdooma (40+ villages), and Sadiya sub-division face annual inundation from Brahmaputra tributaries and Burhi Dihing. Flash floods in Margherita are particularly destructive.</p>
+                <div class="mt-4 text-xs text-slate-400">Source: Tinsukia District Flood Contingency Plan 2024-25</div>
+            </div>
+            <div class="bg-slate-900 p-6 rounded-3xl border border-slate-800">
+                <i class="fa-solid fa-mountain-river text-3xl text-pink-600 mb-4"></i>
+                <h4 class="font-semibold text-lg">Massive River Erosion</h4>
+                <p class="mt-2 text-sm text-slate-400">Burhi Dihing is causing alarming bank erosion in Aghonibari, Mulang (Dihing-Tirap confluence), Dirak Sumoni and Margherita town areas. Homes, farmland and infrastructure lost every monsoon.</p>
+            </div>
+            <div class="bg-slate-900 p-6 rounded-3xl border border-slate-800">
+                <i class="fa-solid fa-exclamation-triangle text-3xl text-pink-600 mb-4"></i>
+                <h4 class="font-semibold text-lg">Gaps in Current Systems</h4>
+                <p class="mt-2 text-sm text-slate-400">Existing warning mechanisms rely heavily on manual gauge readings and upstream alerts. Last-mile communication to remote villages (especially Sadiya) and rapid erosion prediction remain major challenges for DDMA and Circle Officers.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Solutions Section -->
+    <div id="solutions" class="bg-slate-900 py-16 border-t border-b border-slate-800">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <span class="text-pink-600 text-xs font-bold tracking-[2.5px]">OUR CORE TECHNOLOGY</span>
+                    <h2 class="section-header tracking-tighter">Five AI Systems Purpose-Built for Tinsukia</h2>
+                </div>
+                <a href="#demo" class="hidden md:flex items-center text-sm font-medium text-pink-700 hover:text-pink-800">See them in action <i class="fa-solid fa-arrow-right ml-2"></i></a>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+                <!-- Solution 1 -->
+                <div class="tech-card bg-slate-900 text-white p-6 rounded-3xl flex flex-col">
+                    <div class="w-11 h-11 bg-white/10 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-chart-line text-3xl text-pink-400"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight">1. Flood Prediction Engine</h3>
+                    <p class="mt-auto pt-4 text-sm text-slate-300">LSTM + ensemble ML models forecasting water levels 6–72 hours ahead using CWC gauges, IMD rainfall, and upstream Arunachal data. Village and sector-level risk scores aligned with existing DDMA zonal structure.</p>
+                    <div class="mt-4 pt-4 border-t border-white/10 text-[10px] text-pink-400 font-mono tracking-widest">LSTM • XGBOOST • PINN</div>
+                </div>
+                
+                <!-- Solution 2 -->
+                <div class="tech-card bg-slate-900 border border-slate-800 p-6 rounded-3xl flex flex-col">
+                    <div class="w-11 h-11 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-satellite text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight">2. Erosion Sentinel</h3>
+                    <p class="mt-auto pt-4 text-sm text-slate-400">Deep learning on Sentinel-1 SAR &amp; optical imagery for near real-time riverbank change detection and hotspot prediction. Identifies erosion acceleration along Burhi Dihing and Dibru before it becomes critical.</p>
+                    <div class="mt-4 pt-4 border-t text-[10px] text-amber-600 font-mono tracking-widest">U-NET • CHANGE DETECTION</div>
+                </div>
+                
+                <!-- Solution 3 -->
+                <div class="tech-card bg-slate-900 border border-slate-800 p-6 rounded-3xl flex flex-col">
+                    <div class="w-11 h-11 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-comments text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight">3. Multilingual Warning Hub</h3>
+                    <p class="mt-auto pt-4 text-sm text-slate-400">LLM-powered chatbot + voice alerts in Assamese, Hindi, English and local dialects. Personalized evacuation guidance linked to pre-identified relief camps from the Tinsukia DDMP. WhatsApp, SMS &amp; IVR delivery.</p>
+                    <div class="mt-4 pt-4 border-t text-[10px] text-emerald-600 font-mono tracking-widest">LLM • INDIC NLP • IVR</div>
+                </div>
+                
+                <!-- Solution 4 -->
+                <div class="tech-card bg-slate-900 border border-slate-800 p-6 rounded-3xl flex flex-col">
+                    <div class="w-11 h-11 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-camera text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight">4. Rapid Damage Assessment</h3>
+                    <p class="mt-auto pt-4 text-sm text-slate-400">Computer vision models analyze drone footage and citizen smartphone photos to instantly map flooded houses, blocked roads, and priority rescue zones. Generates automated reports for DDMA within hours of an event.</p>
+                    <div class="mt-4 pt-4 border-t text-[10px] text-sky-600 font-mono tracking-widest">YOLO • SEGMENTATION</div>
+                </div>
+                
+                <!-- Solution 5 -->
+                <div class="tech-card bg-slate-900 border border-slate-800 p-6 rounded-3xl flex flex-col">
+                    <div class="w-11 h-11 bg-violet-100 text-violet-600 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-route text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight">5. Smart Relief Optimizer</h3>
+                    <p class="mt-auto pt-4 text-sm text-slate-400">Optimization engine recommends best deployment of boats, relief materials and rescue teams across Tinsukia’s  zones and sectors using live risk predictions and camp capacity data from the District Plan.</p>
+                    <div class="mt-4 pt-4 border-t text-[10px] text-violet-600 font-mono tracking-widest">OR-TOOLS • RL</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIVE DEMO SECTION -->
+    <div id="demo" class="max-w-screen-xl mx-auto px-6 py-16">
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <span class="px-3 py-1 text-xs font-bold tracking-widest bg-pink-100 text-pink-700 rounded-2xl">INTERACTIVE PROTOTYPE</span>
+                <h2 class="section-header tracking-tighter mt-2">Experience the AI in Action</h2>
+                <p class="text-slate-400 mt-1">This fully functional demo simulates our production models using realistic parameters for Tinsukia locations.</p>
+            </div>
+        </div>
+        
+        <div class="grid lg:grid-cols-12 gap-6">
+            
+            <!-- Flood Predictor -->
+            <div class="lg:col-span-7 bg-slate-900 border border-slate-800 shadow-sm rounded-3xl p-7">
+                <div class="flex items-center gap-x-3 mb-6">
+                    <div class="px-4 py-1.5 bg-pink-700 text-white text-xs font-bold tracking-wider rounded-2xl flex items-center gap-x-2">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>AI FLOOD PREDICTION ENGINE</span>
+                    </div>
+                    <div class="text-xs text-slate-400">Simulated LSTM + Ensemble • 87% historical accuracy on validation data</div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
+                    <!-- Inputs -->
+                    <div>
+                        <label class="block text-xs font-semibold tracking-wider text-slate-400 mb-1.5">LOCATION / SECTOR</label>
+                        <select id="location" class="w-full border border-slate-700 bg-slate-900 text-white px-4 py-3 text-sm rounded-2xl focus:outline-none focus:border-pink-600">
+                            <option value="doomdooma-b">Doomdooma Circle • Sector B (Hapjan)</option>
+                            <option value="margherita-mulang">Margherita • Mulang (Burhi Dihing-Tirap confluence)</option>
+                            <option value="tinsukia-sadar">Tinsukia Sadar • Guijan / Dibru area</option>
+                            <option value="sadiya">Sadiya Sub-division • Remote chars</option>
+                            <option value="doomdooma-a">Doomdooma Circle • Sector A (Saikhowa)</option>
+                        </select>
+                        
+                        <div class="mt-5">
+                            <label class="block text-xs font-semibold tracking-wider text-slate-400 mb-1.5">RAINFALL LAST 24 HOURS (mm)</label>
+                            <div class="flex items-center gap-x-3">
+                                <input type="range" id="rain" min="0" max="280" step="5" value="95" class="flex-1 accent-pink-700" oninput="updateRainValue()">
+                                <div class="w-14 text-right">
+                                    <span id="rain-value" class="font-mono text-xl font-semibold text-pink-700">95</span>
+                                    <span class="text-xs text-slate-400">mm</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <label class="block text-xs font-semibold tracking-wider text-slate-400 mb-1.5">RIVER LEVEL ABOVE DANGER MARK (m)</label>
+                            <div class="flex items-center gap-x-3">
+                                <input type="range" id="level" min="-0.5" max="3.5" step="0.1" value="1.2" class="flex-1 accent-pink-700" oninput="updateLevelValue()">
+                                <div class="w-14 text-right">
+                                    <span id="level-value" class="font-mono text-xl font-semibold text-pink-700">1.2</span>
+                                    <span class="text-xs text-slate-400">m</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick facts -->
+                    <div class="bg-slate-800 border border-slate-800 rounded-2xl p-5 text-sm">
+                        <div class="uppercase text-[10px] tracking-[1.5px] font-bold text-slate-400 mb-3">KEY LOCAL FACTORS</div>
+                        <div class="space-y-3 text-xs">
+                            <div class="flex justify-between"><span class="text-slate-400">Burhi Dihing gauge (Margherita)</span> <span class="font-medium">Active</span></div>
+                            <div class="flex justify-between"><span class="text-slate-400">Upstream Arunachal rainfall</span> <span class="font-medium text-amber-600">High</span></div>
+                            <div class="flex justify-between"><span class="text-slate-400">Soil saturation index</span> <span class="font-medium">Elevated</span></div>
+                            <div class="flex justify-between"><span class="text-slate-400">Embankment status</span> <span class="font-medium text-emerald-600">Monitored</span></div>
+                        </div>
+                        
+                        <button onclick="runFloodPrediction()" 
+                                class="mt-6 w-full flex items-center justify-center gap-x-2 h-11 bg-pink-700 hover:bg-pink-800 active:bg-pink-900 transition text-white text-sm font-semibold rounded-2xl">
+                            <i class="fa-solid fa-magic"></i>
+                            <span>RUN  PREDICTION</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- AI Processing Pipeline (shown while "running" the model) -->
+                <div id="prediction-loading" class="hidden mt-6 rounded-3xl p-7 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+                    <div class="flex items-center gap-x-4 mb-6">
+                        <div class="relative w-11 h-11 shrink-0">
+                            <div class="absolute inset-0 rounded-full border-4 border-white/10"></div>
+                            <div class="absolute inset-0 rounded-full border-4 border-t-pink-500 border-r-transparent border-b-transparent border-l-transparent animate-spin"></div>
+                        </div>
+                        <div>
+                            <div class="text-[10px] tracking-[2px] font-bold text-pink-400">RUNNING AI DISASTER INTELLIGENCE PIPELINE</div>
+                            <div id="prediction-status-msg" class="text-sm font-medium text-white mt-0.5">Connecting to Weather Database...</div>
+                        </div>
+                    </div>
+                    <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                        <div id="prediction-progress-fill" class="h-full bg-gradient-to-r from-pink-500 to-pink-400 rounded-full transition-all duration-300 ease-out" style="width:0%"></div>
+                    </div>
+                    <div id="prediction-status-log" class="mt-5 space-y-1.5 text-[11px] font-mono text-slate-400"></div>
+                </div>
+
+                <!-- Results Panel -->
+                <div id="prediction-results" class="hidden mt-6 border border-slate-800 rounded-3xl overflow-hidden prediction-result">
+                    <!-- Report header -->
+                    <div class="bg-slate-900 text-white px-6 py-4 flex items-center justify-between flex-wrap gap-y-2">
+                        <div class="flex items-center gap-x-3">
+                            <div class="w-9 h-9 rounded-xl bg-pink-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-satellite-dish text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="text-[10px] tracking-[2px] font-bold text-slate-400">RESCUENOVA AI</div>
+                                <div class="font-semibold text-sm">Flood Intelligence Report</div>
+                            </div>
+                        </div>
+                        <div id="risk-label" class="text-3xl font-semibold tracking-tighter"></div>
+                    </div>
+
+                    <div class="p-6 bg-slate-900">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+                            <div class="border border-slate-700 rounded-2xl p-3">
+                                <div class="text-slate-400 font-semibold tracking-wide text-[10px]">LOCATION</div>
+                                <div id="report-location" class="font-semibold text-sm text-slate-100 mt-1"></div>
+                            </div>
+                            <div class="border border-slate-700 rounded-2xl p-3">
+                                <div class="text-slate-400 font-semibold tracking-wide text-[10px]">RAINFALL</div>
+                                <div id="report-rainfall" class="font-semibold text-sm text-slate-100 mt-1"></div>
+                            </div>
+                            <div class="border border-slate-700 rounded-2xl p-3">
+                                <div class="text-slate-400 font-semibold tracking-wide text-[10px]">RIVER LEVEL</div>
+                                <div id="report-river-level" class="font-semibold text-sm text-slate-100 mt-1"></div>
+                            </div>
+                            <div class="border border-slate-700 rounded-2xl p-3">
+                                <div class="text-slate-400 font-semibold tracking-wide text-[10px]">EXPECTED FLOOD</div>
+                                <div id="lead-time" class="font-semibold text-sm text-slate-100 mt-1"></div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3 mt-3">
+                            <div class="rounded-2xl p-4 bg-gradient-to-br from-pink-950 to-slate-900 border border-pink-900 text-center">
+                                <div class="text-[10px] font-bold text-pink-400 tracking-wide">FLOOD PROBABILITY</div>
+                                <div id="risk-percent" class="text-4xl font-bold text-pink-400 mt-1 tabular-nums"></div>
+                            </div>
+                            <div class="rounded-2xl p-4 bg-gradient-to-br from-emerald-950 to-slate-900 border border-emerald-900 text-center">
+                                <div class="text-[10px] font-bold text-emerald-400 tracking-wide">AI CONFIDENCE</div>
+                                <div id="report-confidence" class="text-4xl font-bold text-emerald-400 mt-1 tabular-nums"></div>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 border border-slate-700 rounded-2xl p-4 flex items-center gap-x-3">
+                            <div class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-people-group text-slate-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="text-[10px] font-semibold text-slate-400 tracking-wide">AFFECTED POPULATION</div>
+                                <div id="report-population" class="text-lg font-semibold text-slate-100"></div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <div class="text-xs font-bold tracking-wider text-slate-400 mb-2">CRITICAL VILLAGES</div>
+                            <div id="report-villages" class="flex flex-wrap gap-2"></div>
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="text-xs font-bold tracking-wider text-slate-400 mb-2">RECOMMENDED ACTIONS FOR SECTOR OFFICER</div>
+                            <div id="actions-list" class="text-sm space-y-1.5 text-slate-200"></div>
+                        </div>
+
+                        <div class="mt-5 flex gap-x-3">
+                            <button onclick="simulateAlertSent()" class="flex-1 py-2.5 text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl transition">SEND ALERT TO ZONAL OFFICER</button>
+                            <button onclick="simulateCitizenAlert()" class="flex-1 py-2.5 text-xs font-semibold border border-emerald-600 text-emerald-400 hover:bg-emerald-950 rounded-2xl transition">BROADCAST TO REGISTERED VILLAGES</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Side panel: Quick Erosion + Chat -->
+            <div class="lg:col-span-5 space-y-6">
+                <!-- Erosion Demo -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="font-semibold">Erosion Sentinel • Quick Scan</div>
+                        <span class="text-[10px] px-2.5 py-px bg-amber-100 text-amber-700 rounded font-medium">Sentinel-1 • 2 days ago</span>
+                    </div>
+
+                    <div id="erosion-panel-content">
+                        <div class="grid grid-cols-2 gap-3 mb-3">
+                            <div class="border border-slate-700 rounded-2xl p-3">
+                                <div class="text-[10px] font-semibold text-slate-400 tracking-wide">LAST KNOWN LOSS</div>
+                                <div class="text-xl font-bold text-amber-600 mt-1">+14.2 m</div>
+                                <div class="text-[10px] text-slate-400 mt-0.5">Mulang right bank • 14 days</div>
+                            </div>
+                            <div class="border border-slate-700 rounded-2xl p-3">
+                                <div class="text-[10px] font-semibold text-slate-400 tracking-wide">TREND</div>
+                                <div class="flex items-center gap-x-1.5 mt-1">
+                                    <i class="fa-solid fa-arrow-trend-up text-red-500"></i>
+                                    <span class="text-sm font-bold text-red-600">Accelerating</span>
+                                </div>
+                                <div class="text-[10px] text-slate-400 mt-0.5">+37% vs previous period</div>
+                            </div>
+                        </div>
+
+                        <div class="border border-slate-700 rounded-2xl p-3 mb-4">
+                            <div class="text-[10px] font-semibold text-slate-400 tracking-wide mb-2">WEEKLY EROSION RATE</div>
+                            <div class="flex items-end gap-x-1.5 h-16">
+                                <div class="flex-1 bg-amber-200 rounded-t"style="height:32%"></div>
+                                <div class="flex-1 bg-amber-300 rounded-t" style="height:48%"></div>
+                                <div class="flex-1 bg-amber-300 rounded-t" style="height:44%"></div>
+                                <div class="flex-1 bg-amber-400 rounded-t" style="height:64%"></div>
+                                <div class="flex-1 bg-amber-500 rounded-t" style="height:78%"></div>
+                                <div class="flex-1 bg-red-500 rounded-t" style="height:100%"></div>
+                            </div>
+                        </div>
+
+                        <button onclick="runErosionAnalysis()" class="w-full text-xs py-3 border border-amber-600 hover:bg-amber-950 text-amber-400 font-semibold rounded-2xl flex items-center justify-center gap-x-2">
+                            <i class="fa-solid fa-satellite"></i>
+                            <span>RUN AI EROSION ANALYSIS</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Chatbot Demo -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col h-[260px]">
+                    <div class="font-semibold flex items-center gap-x-2 mb-3">
+                        <i class="fa-solid fa-robot text-emerald-600"></i> 
+                        <span>AI Warning Assistant</span>
+                        <span class="ml-auto text-[10px] px-2 py-px bg-emerald-100 text-emerald-700 rounded">Multilingual • Live</span>
+                    </div>
+                    
+                    <div id="chat-window" class="flex-1 bg-slate-800 border border-slate-800 rounded-2xl p-3 text-xs overflow-auto mb-3 space-y-2">
+                        <div class="flex gap-x-2">
+                            <div class="bg-slate-900 px-3 py-1.5 rounded-2xl text-slate-400 max-w-[80%]">Hello! I am RescueNova AI. How can I help you with flood or erosion information today?</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-x-2">
+                        <input id="chat-input" type="text" placeholder="Ask about flood risk in my village..." class="flex-1 bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm px-4 py-2 rounded-2xl text-xs focus:outline-none focus:border-pink-600" onkeypress="if (event.key === 'Enter') sendChatMessage()">
+                        <button onclick="sendChatMessage()" class="px-5 bg-emerald-600 text-white rounded-2xl text-sm font-medium">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <p class="text-center text-xs text-slate-400 mt-6">This is a high-fidelity prototype. Production version integrates live CWC/IMD APIs, Google Earth Engine, and WhatsApp Business API.</p>
+    </div>
+
+    <!-- Impact & Roadmap -->
+    <div id="impact" class="bg-slate-900 text-white py-16">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-x-8 gap-y-10">
+                <div class="md:col-span-5">
+                    <span class="uppercase tracking-[3px] text-pink-400 text-xs font-bold">PROJECTED IMPACT (PILOT YEAR)</span>
+                    <h2 class="text-4xl font-semibold tracking-tighter mt-3 leading-none">Transforming disaster response in Tinsukia from reactive to anticipatory.</h2>
+                    
+                    <div class="mt-8 text-sm text-slate-300 space-y-4">
+                        <div class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>24–48 hour advance warnings enabling proactive evacuation of vulnerable villages in Doomdooma and Margherita circles.</span></div>
+                        <div class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Better targeting of limited boats and relief resources using sector-level risk scores aligned with existing DDMA zonal officers.</span></div>
+                        <div class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Reduced economic loss to tea gardens, agriculture and homes through earlier erosion hotspot alerts.</span></div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-white/5 border border-white/10 rounded-3xl p-5">
+                            <div class="text-emerald-400 text-xs tracking-widest">YEAR 1 TARGET</div>
+                            <div class="text-5xl font-semibold tabular-nums mt-1">35%</div>
+                            <div class="text-sm mt-1 text-white/70">Reduction in response time to flood alerts</div>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-3xl p-5">
+                            <div class="text-emerald-400 text-xs tracking-widest">COVERAGE</div>
+                            <div class="text-5xl font-semibold tabular-nums mt-1">120+</div>
+                            <div class="text-sm mt-1 text-white/70">Villages across 3 sub-divisions in first pilot phase</div>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-3xl p-5">
+                            <div class="text-emerald-400 text-xs tracking-widest">COST SAVINGS</div>
+                            <div class="text-5xl font-semibold tabular-nums mt-1">₹2.8Cr</div>
+                            <div class="text-sm mt-1 text-white/70">Estimated annual avoided losses (pilot estimate)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="max-w-screen-xl mx-auto px-6 py-16">
+        <div class="max-w-3xl mx-auto text-center">
+            <span class="text-xs font-bold tracking-[3px] text-pink-600">FOUNDED IN TINSUKIA</span>
+            <p class="mt-4 text-lg text-slate-400">RescueNova AI was born from firsthand experience of annual floods in Tinsukia district and a deep belief that physics-informed artificial intelligence, combined with intimate local knowledge, can save lives and livelihoods.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-slate-950 text-white py-10 border-t border-slate-800">
+        <div class="max-w-screen-xl mx-auto px-6 text-center">
+            <div class="text-xs text-pink-300">RescueNova AI Technologies Pvt. Ltd. • Tinsukia, Assam • 2026</div>
+        </div>
+    </div>
+
+    <!-- Fieldwork Modal -->
+    <dialog id="fieldwork-modal" class="rounded-3xl p-0 max-w-2xl w-full max-h-[85vh] overflow-auto bg-slate-900 text-slate-300 backdrop:bg-black/60">
+        <div class="p-8">
+            <div class="flex justify-between items-start">
+                <div>
+                    <span class="text-xs px-3 py-1 bg-amber-100 text-amber-700 rounded-2xl font-bold">FIELDWORK COMPONENT</span>
+                    <h3 class="font-semibold text-2xl mt-2 tracking-tight text-white">Ground Truthing &amp; Local Validation</h3>
+                </div>
+                <button onclick="document.getElementById('fieldwork-modal').close()" class="text-3xl text-slate-500 hover:text-white transition">&times;</button>
+            </div>
+            
+            <div class="prose prose-sm max-w-none mt-6 text-slate-400 text-[15px]">
+                <p><strong>Objective:</strong> Validate AI model assumptions against real ground conditions and integrate with existing Tinsukia District Disaster Management Plan structures (zones, sectors, relief camps).</p>
+                
+                <h4 class="font-semibold mt-5">Activities Conducted (Recommended for your report):</h4>
+                <ul class="list-disc pl-5 space-y-1 text-sm">
+                    <li>Visited Tinsukia District Emergency Operation Centre (DEOC) and interacted with officials on current early warning dissemination methods and data gaps.</li>
+                    <li>Reviewed the official <strong>Tinsukia Flood Contingency Plan 2024-25</strong> and District Disaster Management Plan — mapped our AI outputs directly to existing Zonal/Sector Officer responsibilities.</li>
+                    <li>Conducted informal surveys in flood-affected villages near Burhi Dihing (Mulang area, Doomdooma pathar villages) to understand last-mile communication challenges and community information needs.</li>
+                    <li>Analyzed historical erosion patterns using public Sentinel imagery around Dirak Sumoni and Margherita town banks.</li>
+                    <li>Identified key data sources: CWC water level gauges, IMD rainfall, upstream data sharing with Arunachal Pradesh (already partially in place).</li>
+                </ul>
+                
+                <h4 class="font-semibold mt-5">Key Findings Incorporated into Our AI Design:</h4>
+                <ul class="list-disc pl-5 space-y-1 text-sm">
+                    <li>Current warnings often reach villages late because they rely on manual relay. Our multilingual AI chatbot + WhatsApp broadcast solves the last-mile gap.</li>
+                    <li>Erosion monitoring is almost entirely visual/manual. Satellite AI change detection provides objective, frequent updates.</li>
+                    <li>Sadiya sub-division faces unique access issues (separated by Brahmaputra). Our models prioritize predictive evacuation planning for boat-dependent areas.</li>
+                    <li>DDMA already has excellent pre-identified relief camp lists. Our optimizer uses this data directly instead of reinventing.</li>
+                </ul>
+            </div>
+            
+            <div class="mt-6 text-xs bg-slate-800 p-4 rounded-2xl text-slate-400">
+                <strong>Tip for your presentation/report:</strong> Emphasize that RescueNova AI is not replacing existing systems — it augments the excellent zonal structure already documented in the Tinsukia DDMP with predictive intelligence and faster communication.
+            </div>
+        </div>
+    </dialog>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
